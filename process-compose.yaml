@@ -1,0 +1,9 @@
+version: "0.5"
+
+processes:
+  server:
+    command: watchexec --restart --watch lianjia_crawler lianjia-crawler-server
+    environment:
+      - PYTHONUNBUFFERED=1
+  client:
+    command: pnpm run dev
