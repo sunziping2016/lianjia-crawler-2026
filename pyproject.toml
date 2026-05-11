@@ -6,12 +6,16 @@ build-backend = "uv_build"
 name = "lianjia-crawler"
 version = "0.1.0"
 requires-python = ">=3.13"
+dependencies = ["numpy>=2.4.4", "playwright>=1.59.0", "torch>=2.11.0"]
 
 [project.scripts]
-lianjia-crawler-server = "lianjia_crawler.server:main"
+lianjia-crawler = "lianjia_crawler.run:main"
 
 [tool.uv.build-backend]
 module-root = ""
 
 [tool.pyright]
 typeCheckingMode = "strict"
+
+[tool.ruff]
+extend-select = ["I"]
