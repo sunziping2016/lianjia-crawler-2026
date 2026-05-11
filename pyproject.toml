@@ -6,7 +6,13 @@ build-backend = "uv_build"
 name = "lianjia-crawler"
 version = "0.1.0"
 requires-python = ">=3.13"
-dependencies = ["numpy>=2.4.4", "playwright>=1.59.0", "torch>=2.11.0"]
+dependencies = [
+    "numpy>=2.4.4",
+    "playwright>=1.59.0",
+    "pydantic>=2.13.4",
+    "pyyaml>=6.0.3",
+    "torch>=2.11.0",
+]
 
 [project.scripts]
 lianjia-crawler = "lianjia_crawler.run:main"
